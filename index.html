@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Твой Стиль - салон красоты в Калининграде · Маршала Борзова 48А</title>
+<meta name="description" content="Салон красоты «Твой стиль»: стрижки, окрашивание, маникюр, педикюр, массаж и косметолог. Калининград, ул. Маршала Борзова 48А, 2 этаж. Запись онлайн или +7 (4012) 75-38-55.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23171310'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='%23d8b678' text-anchor='middle'%3EТ%3C/text%3E%3C/svg%3E">
+<!--
+  ШРИФТЫ (без CDN): положите файлы в папку fonts/ рядом с этой страницей:
+    fonts/prata-regular.woff2      (Prata, 400)  - заголовки
+    fonts/manrope-regular.woff2    (Manrope, 400)
+    fonts/manrope-medium.woff2     (Manrope, 500)
+    fonts/manrope-semibold.woff2   (Manrope, 600)
+    fonts/manrope-bold.woff2       (Manrope, 700) - основной текст
+-->
+<style>
+@font-face{font-family:'Prata';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/prata-regular.woff2') format('woff2');}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/manrope-regular.woff2') format('woff2');}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/manrope-medium.woff2') format('woff2');}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/manrope-semibold.woff2') format('woff2');}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/manrope-bold.woff2') format('woff2');}
+
+:root{
+  --ink:#1d1710;
+  --ink-soft:#57493c;
+  --paper:#faf6ef;
+  --card:#fffdf8;
+  --dark:#171310;
+  --dark-2:#231c15;
+  --gold:#b08a4f;
+  --gold-deep:#8f6d36;
+  --gold-light:#d8b678;
+  --cream:#efe6d6;
+  --line:rgba(29,23,16,.1);
+  --line-light:rgba(239,230,214,.16);
+  --radius:18px;
+  --shadow:0 18px 44px -18px rgba(29,23,16,.22);
+  --header-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 16px);overflow-x:clip}
+body{
+  font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);
+  background:var(--paper);
+  overflow-x:clip;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+h1,h2,h3,.serif{font-family:'Prata',Georgia,'Times New Roman',serif;font-weight:400}
+::selection{background:var(--gold);color:#fff}
+
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:100px 0}
+.section.tinted{background:#f3ecdf}
+.section.dark{background:var(--dark);color:var(--cream)}
+.section-head{max-width:720px;margin-bottom:52px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:14px;
+  font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);
+  margin-bottom:18px;
+}
+.section.dark .eyebrow{color:var(--gold-light)}
+.eyebrow::before{content:'';width:34px;height:1px;background:currentColor;opacity:.7}
+.sec-num{font-family:'Prata',serif;color:var(--gold);font-size:15px;letter-spacing:.1em}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.12;letter-spacing:-.01em}
+.section-head .lead{margin-top:16px;font-size:17px;color:var(--ink-soft);max-width:600px}
+.section.dark .section-head .lead{color:#c9bca6}
+.gold{color:var(--gold)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:12px 30px;border-radius:12px;
+  font-weight:700;font-size:15px;letter-spacing:.02em;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease,color .2s ease;
+  white-space:nowrap;
+}
+.btn svg{flex:none;transition:transform .2s ease}
+.btn:hover svg.arr{transform:translateX(4px)}
+.btn-gold{background:var(--gold);color:#141009;box-shadow:0 12px 28px -10px rgba(176,138,79,.55)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(239,230,214,.4);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--gold-light);color:var(--gold-light);transform:translateY(-2px)}
+.btn-dark{background:var(--dark);color:var(--cream)}
+.btn-dark:hover{background:#2c2318;transform:translateY(-2px)}
+.btn-sm{min-height:44px;padding:8px 20px;font-size:14px;border-radius:10px}
+
+/* ---------- header ---------- */
+.site-header{top:42px;
+  position:fixed;inset:42px 0 auto 0;z-index:1200;height:var(--header-h);
+  background:rgba(23,19,16,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;transition:border-color .3s,background .3s;
+}
+.site-header.scrolled{background:rgba(23,19,16,.96);border-bottom-color:var(--line-light)}
+.header-inner{height:100%;display:flex;align-items:center;gap:20px}
+.logo{display:flex;flex-direction:column;line-height:1.1;flex:none}
+.logo small{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-light)}
+.logo b{font-family:'Prata',serif;font-weight:400;font-size:21px;color:var(--cream);letter-spacing:.02em}
+.main-nav{display:flex;gap:30px;margin-left:auto}
+.main-nav a{
+  position:relative;font-size:14px;font-weight:600;color:#d9cdb9;padding:8px 0;transition:color .2s;
+}
+.main-nav a::after{content:'';position:absolute;left:0;bottom:2px;width:0;height:1px;background:var(--gold-light);transition:width .25s}
+.main-nav a:hover{color:#fff}
+.main-nav a:hover::after{width:100%}
+.header-cta{margin-left:8px}
+.burger{
+  display:none;position:relative;z-index:1300;
+  width:48px;height:48px;border-radius:12px;
+  border:1px solid var(--line-light);background:rgba(255,255,255,.04);
+  align-items:center;justify-content:center;flex:none;margin-left:auto;
+}
+.burger svg{position:absolute;transition:opacity .25s,transform .3s;color:var(--cream)}
+.burger .ic-x{opacity:0;transform:rotate(-90deg) scale(.6)}
+.burger.active .ic-burger{opacity:0;transform:rotate(90deg) scale(.6)}
+.burger.active .ic-x{opacity:1;transform:rotate(0) scale(1)}
+
+/* mobile nav */
+.mnav{
+  position:fixed;inset:0;z-index:1100;
+  background:rgba(20,16,12,.98);
+  padding:calc(var(--header-h) + 28px) 20px 36px;
+  display:flex;flex-direction:column;
+  transform:translateY(-102%);visibility:hidden;
+  transition:transform .38s cubic-bezier(.22,.8,.3,1),visibility .38s;
+}
+.mnav.open{transform:translateY(0);visibility:visible}
+.mnav-links{display:flex;flex-direction:column;gap:6px;overflow-y:auto}
+.mnav-links a{
+  display:flex;align-items:center;gap:14px;
+  font-family:'Prata',serif;font-size:26px;color:var(--cream);
+  padding:14px 8px;border-bottom:1px solid rgba(239,230,214,.09);
+}
+.mnav-links a span{font-size:12px;font-family:'Manrope',sans-serif;font-weight:700;color:var(--gold-light);letter-spacing:.15em}
+.mnav-foot{margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:14px}
+.mnav-phone{display:flex;align-items:center;gap:10px;color:var(--cream);font-weight:700;font-size:17px}
+.mnav-phone svg{color:var(--gold-light)}
+.mnav-addr{font-size:13px;color:#9c8f7c;line-height:1.5}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:100svh;
+  display:flex;flex-direction:column;
+  background:var(--dark);color:var(--cream);
+  padding-top:var(--header-h);overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;z-index:0;display:none}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(165deg,rgba(23,19,16,.92) 30%,rgba(23,19,16,.72) 65%,rgba(23,19,16,.88))}
+.hero-grid{
+  position:relative;z-index:1;flex:1;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+  padding:56px 0 40px;
+}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);margin-bottom:22px}
+.hero-kicker::before{content:'';width:34px;height:1px;background:var(--gold-light);opacity:.8}
+.hero h1{font-size:clamp(38px,5.4vw,66px);line-height:1.06;letter-spacing:-.01em;color:#f6efe2}
+.hero h1 em{font-style:normal;color:var(--gold-light)}
+.hero-sub{margin-top:22px;max-width:520px;font-size:17px;line-height:1.65;color:#cfc2ab}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{
+  display:inline-flex;align-items:center;gap:9px;
+  min-height:40px;padding:7px 15px;border-radius:999px;
+  border:1px solid var(--line-light);background:rgba(255,255,255,.04);
+  font-size:13.5px;font-weight:600;color:#e6dbc6;
+}
+.chip svg{color:var(--gold-light);flex:none}
+.hero-media{position:relative;max-width:520px;justify-self:end;width:100%}
+.hero-media::before{content:'';position:absolute;inset:22px -22px -22px 22px;border:1px solid rgba(216,182,120,.45);border-radius:20px;pointer-events:none}
+.hero-media img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:20px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55)}
+.hero-badge{
+  position:absolute;left:-18px;bottom:26px;
+  display:flex;align-items:center;gap:10px;
+  background:var(--card);color:var(--ink);
+  border-radius:14px;padding:12px 18px;box-shadow:var(--shadow);
+  font-size:13px;font-weight:700;line-height:1.3;
+}
+.hero-badge .stars{display:flex;gap:2px;color:var(--gold)}
+.hero-badge b{font-family:'Prata',serif;font-weight:400;font-size:22px}
+
+/* ticker */
+.ticker-wrap{position:relative;z-index:1;padding-bottom:26px;margin-top:auto}
+.ticker{
+  overflow:hidden;border-radius:14px;
+  background:linear-gradient(100deg,#c9a15f,var(--gold) 55%,#c9a15f);
+  box-shadow:0 14px 34px -16px rgba(176,138,79,.7);
+}
+.ticker-track{display:flex;width:max-content;animation:tickmove 30s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.tick-group{display:flex;align-items:center;flex:none}
+.tick-item{
+  display:inline-flex;align-items:center;gap:16px;padding:13px 16px 13px 0;
+  font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#171310;white-space:nowrap;
+}
+.tick-item svg{opacity:.75}
+@keyframes tickmove{to{transform:translateX(-50%)}}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
+.about-copy p{margin-top:16px;color:var(--ink-soft);font-size:16.5px}
+.about-copy p b{color:var(--ink)}
+.about-quote{
+  margin-top:26px;padding:20px 24px;border-left:3px solid var(--gold);
+  background:var(--card);border-radius:0 14px 14px 0;
+  font-family:'Prata',serif;font-size:17.5px;line-height:1.55;color:var(--ink);
+}
+.about-quote span{display:block;margin-top:8px;font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;color:var(--gold-deep)}
+.perks{margin-top:30px;display:grid;gap:16px}
+.perk{display:flex;gap:16px;align-items:flex-start}
+.perk-ic{
+  flex:none;width:48px;height:48px;border-radius:13px;
+  background:var(--dark);color:var(--gold-light);
+  display:flex;align-items:center;justify-content:center;
+}
+.perk b{display:block;font-size:15.5px}
+.perk p{margin:2px 0 0;font-size:14px;color:var(--ink-soft)}
+.about-media{position:relative;padding-bottom:56px}
+.about-media .ph-main{width:100%;aspect-ratio:4/4.6;object-fit:cover;border-radius:20px;box-shadow:var(--shadow)}
+.about-media .ph-small{
+  position:absolute;right:-14px;bottom:0;width:46%;
+  border-radius:16px;border:6px solid var(--paper);box-shadow:var(--shadow);
+}
+.stats{margin-top:70px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;text-align:left}
+.stat b{font-family:'Prata',serif;font-weight:400;font-size:clamp(28px,3vw,40px);color:var(--gold-deep);display:block;line-height:1.1}
+.stat span{display:block;margin-top:8px;font-size:13.5px;color:var(--ink-soft);line-height:1.45}
+
+/* ---------- services ---------- */
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.serv-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px 26px;display:flex;flex-direction:column;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s;
+}
+.serv-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(176,138,79,.45)}
+.serv-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.serv-ic{
+  width:52px;height:52px;border-radius:14px;flex:none;
+  background:linear-gradient(140deg,#241c13,#171310);color:var(--gold-light);
+  display:flex;align-items:center;justify-content:center;
+}
+.price-tag{
+  font-size:13px;font-weight:700;color:var(--gold-deep);
+  background:rgba(176,138,79,.13);border:1px solid rgba(176,138,79,.3);
+  border-radius:999px;padding:6px 13px;white-space:nowrap;
+}
+.serv-card h3{font-size:21px;margin-bottom:8px}
+.serv-card > p{font-size:14.5px;color:var(--ink-soft);flex:1}
+.serv-note{margin-top:12px;font-size:12.5px;color:#8b7a63;line-height:1.5}
+.serv-card .btn{margin-top:20px;width:100%}
+.serv-foot{
+  margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+  font-size:13.5px;color:#8b7a63;
+}
+.serv-foot svg{color:var(--gold);flex:none}
+.cta-band{
+  margin-top:54px;border-radius:24px;overflow:hidden;position:relative;
+  background:var(--dark);color:var(--cream);
+  padding:46px 48px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between;
+}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 220px at 85% -20%,rgba(216,182,120,.22),transparent 65%);pointer-events:none}
+.cta-band h3{font-size:clamp(22px,2.6vw,32px);max-width:560px;line-height:1.25}
+.cta-band .band-contacts{display:flex;flex-direction:column;gap:8px;margin-top:12px;font-size:14px;color:#c9bca6}
+.cta-band .band-contacts a{font-weight:700;color:var(--gold-light);font-size:17px}
+
+/* ---------- works ---------- */
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.work-card{border-radius:20px;overflow:hidden;position:relative;background:var(--dark)}
+.work-card img{width:100%;aspect-ratio:3/3.9;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+.work-card:hover img{transform:scale(1.06)}
+.work-cap{
+  position:absolute;inset:auto 0 0 0;padding:46px 22px 22px;
+  background:linear-gradient(to top,rgba(14,11,8,.92),rgba(14,11,8,0));
+  color:var(--cream);
+}
+.work-tag{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#141009;background:var(--gold-light);border-radius:999px;padding:5px 12px;margin-bottom:10px;
+}
+.work-cap b{display:block;font-family:'Prata',serif;font-weight:400;font-size:19px;line-height:1.3}
+.works-note{
+  margin-top:26px;display:flex;align-items:center;gap:10px;
+  font-size:13.5px;color:#8b7a63;
+}
+.works-note svg{color:var(--gold);flex:none}
+
+/* ---------- masters ---------- */
+.masters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.master-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 24px;text-align:center;
+  transition:transform .25s,box-shadow .25s;
+}
+.master-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.avatar{
+  width:74px;height:74px;border-radius:50%;margin:0 auto 16px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Prata',serif;font-size:27px;color:#fdfaf4;
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.25),0 10px 22px -10px rgba(29,23,16,.4);
+}
+.av-1{background:#8f6d36}.av-2{background:#5c5a78}.av-3{background:#9a5a4a}.av-4{background:#4e6b5a}
+.av-5{background:#7a5a68}.av-6{background:#486275}
+.master-card h3{font-size:20px}
+.master-role{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);margin-top:5px}
+.master-quote{margin-top:16px;font-size:14px;line-height:1.55;color:var(--ink-soft);font-style:italic}
+.master-quote span{display:block;margin-top:8px;font-style:normal;font-size:12.5px;font-weight:700;color:#8b7a63}
+
+/* ---------- reviews ---------- */
+.rating-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.rating-card{
+  display:flex;align-items:center;gap:14px;
+  background:var(--dark-2);border:1px solid var(--line-light);
+  border-radius:16px;padding:16px 22px;
+}
+.rating-card b{font-family:'Prata',serif;font-weight:400;font-size:34px;color:var(--gold-light);line-height:1}
+.rating-card .stars{display:flex;gap:3px;color:var(--gold-light);margin-bottom:4px}
+.rating-card span{font-size:12.5px;color:#b7a992;line-height:1.4;display:block}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;display:flex;flex-direction:column;gap:14px;
+}
+.rev-head{display:flex;align-items:center;gap:14px}
+.rev-head .avatar{width:52px;height:52px;margin:0;font-size:19px;box-shadow:none}
+.rev-head b{display:block;font-size:15.5px}
+.rev-head time{font-size:12.5px;color:#8b7a63}
+.rev-card blockquote{font-size:14.5px;line-height:1.65;color:var(--ink-soft);flex:1}
+.rev-mark{color:var(--gold);flex:none}
+
+/* ---------- faq ---------- */
+.faq-list{max-width:820px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{
+  list-style:none;display:flex;align-items:center;gap:18px;
+  padding:22px 4px;cursor:pointer;font-family:'Prata',serif;font-size:19px;line-height:1.35;
+  transition:color .2s;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:var(--gold-deep)}
+.faq-item summary .q-ic{
+  flex:none;margin-left:auto;width:38px;height:38px;border-radius:50%;
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+  transition:transform .3s,background .3s,color .3s;
+}
+.faq-item[open] summary .q-ic{transform:rotate(45deg);background:var(--dark);color:var(--gold-light);border-color:var(--dark)}
+.faq-item .a{padding:0 4px 24px;max-width:680px;color:var(--ink-soft);font-size:15px}
+
+/* ---------- contacts ---------- */
+.contacts-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+.c-list{display:grid;gap:22px;margin-top:8px}
+.c-item{display:flex;gap:16px;align-items:flex-start}
+.c-ic{
+  flex:none;width:50px;height:50px;border-radius:14px;
+  background:rgba(176,138,79,.14);color:var(--gold-deep);
+  display:flex;align-items:center;justify-content:center;
+}
+.c-item b{display:block;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8b7a63;margin-bottom:3px}
+.c-item div{font-size:16px;font-weight:600;line-height:1.5}
+.c-item div a:hover{color:var(--gold-deep)}
+.c-item small{display:block;font-weight:500;font-size:13px;color:var(--ink-soft);margin-top:3px}
+.parking-box{
+  margin-top:6px;border-radius:var(--radius);
+  background:var(--dark);color:var(--cream);padding:26px 28px;
+  display:flex;gap:18px;align-items:flex-start;
+}
+.parking-box svg{flex:none;color:var(--gold-light);margin-top:2px}
+.parking-box b{font-family:'Prata',serif;font-weight:400;font-size:19px;display:block;margin-bottom:6px}
+.parking-box p{font-size:14px;color:#c9bca6;line-height:1.6}
+.c-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.c-photos figure{border-radius:18px;overflow:hidden;position:relative}
+.c-photos img{width:100%;object-fit:cover;transition:transform .6s}
+.c-photos figure:hover img{transform:scale(1.05)}
+.c-photos .wide{grid-column:1/-1}
+.c-photos img.wide-img{aspect-ratio:16/8.6}
+.c-photos img.sq-img{aspect-ratio:1/1.02}
+.c-photos figcaption{
+  position:absolute;left:12px;bottom:12px;
+  background:rgba(20,16,12,.78);color:var(--cream);backdrop-filter:blur(4px);
+  font-size:12px;font-weight:600;border-radius:8px;padding:7px 12px;letter-spacing:.02em;
+}
+.contacts-cta{margin-top:30px}
+
+/* ---------- footer ---------- */
+.footer{background:var(--dark);color:#b3a48d;padding:56px 0 34px}
+.footer-top{display:flex;flex-wrap:wrap;gap:36px;justify-content:space-between;align-items:flex-start;padding-bottom:34px;border-bottom:1px solid var(--line-light)}
+.footer .logo b{font-size:24px}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:14px}
+.footer-links a{color:#b3a48d;transition:color .2s}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-contacts{font-size:14px;line-height:1.9;text-align:right}
+.footer-contacts a{color:var(--cream);font-weight:700}
+.footer-bottom{padding-top:26px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12.5px;color:#7d715e}
+
+/* ---------- modal ---------- */
+.modal{position:fixed;inset:0;z-index:1400;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.open{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(15,11,8,.74);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.modal-card{
+  position:relative;width:100%;max-width:620px;
+  max-height:min(92svh,840px);overflow-y:auto;overscroll-behavior:contain;
+  background:var(--paper);border-radius:22px;padding:40px 40px 36px;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.6);
+  animation:modalIn .32s cubic-bezier(.2,.8,.3,1);
+}
+@keyframes modalIn{from{opacity:0;transform:translateY(26px) scale(.98)}to{opacity:1;transform:none}}
+.modal-close{
+  position:sticky;top:0;float:right;margin:-8px -8px 0 12px;
+  width:46px;height:46px;border-radius:50%;z-index:2;
+  background:var(--dark);color:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .25s,background .2s;
+}
+.modal-close:hover{transform:rotate(90deg);background:var(--gold-deep)}
+.modal-kicker{font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px}
+.modal-card h3{font-size:clamp(24px,3vw,31px);line-height:1.2}
+.modal-sub{margin-top:10px;font-size:14px;color:var(--ink-soft)}
+.modal-sub a{font-weight:700;color:var(--gold-deep);white-space:nowrap}
+.book-form{margin-top:26px;display:grid;gap:16px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8b7a63;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;min-height:52px;padding:13px 16px;border-radius:12px;
+  border:1px solid #ddd0bc;background:#fff;color:var(--ink);
+  font-family:inherit;font-size:15px;transition:border-color .2s,box-shadow .2s;
+}
+.field textarea{min-height:88px;resize:vertical}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238f6d36' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(176,138,79,.2)}
+.field.invalid input,.field.invalid select{border-color:#c0554a;box-shadow:0 0 0 3px rgba(192,85,74,.15)}
+.err-msg{display:none;font-size:12px;color:#c0554a;margin-top:6px}
+.field.invalid .err-msg{display:block}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.book-form .btn{width:100%;margin-top:4px}
+.form-hint{font-size:11.5px;color:#8b7a63;text-align:center;line-height:1.5}
+.modal-phone-side{
+  margin-top:22px;padding-top:20px;border-top:1px dashed var(--line);
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--ink-soft);
+}
+.modal-phone-side a{display:inline-flex;align-items:center;gap:9px;font-weight:700;color:var(--ink);font-size:16px}
+.modal-phone-side a:hover{color:var(--gold-deep)}
+.modal-success{display:none;text-align:center;padding:26px 0 10px}
+.modal-success.show{display:block}
+.success-ic{
+  width:84px;height:84px;border-radius:50%;margin:0 auto 22px;
+  background:linear-gradient(140deg,var(--gold),var(--gold-deep));
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  box-shadow:0 16px 36px -12px rgba(176,138,79,.6);
+  animation:popIn .45s cubic-bezier(.2,.9,.3,1.3);
+}
+@keyframes popIn{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-success h3{font-size:26px}
+.modal-success p{margin:12px auto 0;max-width:380px;font-size:15px;color:var(--ink-soft)}
+.modal-success p a{font-weight:700;color:var(--gold-deep)}
+.modal-success .btn{margin-top:26px}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .ticker-track{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- adaptive ---------- */
+@media (max-width:1080px){
+  .serv-grid{grid-template-columns:repeat(2,1fr)}
+  .masters-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:960px){
+  .main-nav,.header-cta{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr;gap:0;padding:36px 0 30px}
+  .hero-bg{display:block}
+  .hero-media{display:none}
+  .hero-mphoto{display:block}
+  .hero-sub{max-width:100%}
+  .about-grid,.contacts-grid{grid-template-columns:1fr;gap:44px}
+  .about-media{padding-bottom:50px;max-width:560px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .works-grid{grid-template-columns:repeat(2,1fr)}
+  .cta-band{padding:38px 30px}
+}
+@media (max-width:768px){
+  .wrap{padding:0 16px}
+  .section{padding:72px 0}
+  .section-head{margin-bottom:36px}
+  h2{font-size:clamp(26px,6.4vw,34px)}
+  .hero h1{font-size:clamp(32px,8.6vw,42px)}
+  .hero-sub{font-size:15.5px;margin-top:16px}
+  .hero-actions{margin-top:24px}
+  .hero-actions .btn{flex:1 1 auto}
+  .hero-facts{margin-top:22px;gap:8px}
+  .chip{font-size:12.5px;padding:6px 12px}
+  .ticker-wrap{padding-bottom:18px}
+  .form-row{grid-template-columns:1fr}
+  .modal-card{padding:30px 20px 26px;border-radius:18px}
+  .footer-top{flex-direction:column}
+  .footer-contacts{text-align:left}
+}
+@media (max-width:640px){
+  .serv-grid{grid-template-columns:1fr}
+  .works-grid{grid-template-columns:1fr}
+  .masters-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr);gap:12px}
+  .stat{padding:20px 18px}
+  .cta-band{flex-direction:column;align-items:stretch;text-align:left}
+  .c-photos{grid-template-columns:1fr}
+}
+@media (max-height:660px) and (max-width:960px){
+  .hero{min-height:100svh}
+  .hero-grid{padding:22px 0 20px}
+  .hero-facts{display:none}
+}
+/* ---------- ПЛАШКА ALTAVALTA ---------- */
+body{padding-top:42px}
+.demo-ribbon{position:fixed;top:0;left:0;right:0;z-index:1300;display:flex;align-items:center;justify-content:center;gap:16px;background:#221019;border-bottom:1px solid rgba(201,164,104,.35);padding:8px 14px}
+.demo-label{display:flex;align-items:center;gap:8px;color:#fdf3ea;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.demo-label i{width:5px;height:5px;border-radius:50%;background:#c99a6c;display:inline-block}
+.demo-label .dl-sub{opacity:.75;font-weight:400}
+.demo-label .dl-love{color:#c99a6c}
+.demo-remove{margin-left:6px;background:transparent;border:1px solid rgba(201,164,104,.6);color:#fdf3ea;padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;transition:all .25s}
+.demo-remove:hover{background:#c99a6c;color:#221019}
+@media (max-width:560px){.demo-ribbon{padding:8px 10px;gap:8px}.demo-label{font-size:10.5px;letter-spacing:.12em}.demo-remove{padding:5px 10px;font-size:11px}}
+body.demo-off .demo-ribbon{display:none} body.demo-off{padding-top:0} body.demo-off .site-header{top:0}
+/* ---------- ПОДПИСЬ ALTAVALTA ---------- */
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(201,164,104,.22);flex-wrap:wrap}
+.brand-made{color:#7d8a74;font-family:'Jost',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:lowercase}
+.brand-link{display:inline-flex;align-items:center;text-decoration:none;transition:opacity .3s}
+.brand-link:hover{opacity:.8}
+.sig-name{display:inline-flex;color:#d8d2c2;font-family:'Jost',sans-serif;font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
+.sig-name b{font-weight:inherit}
+.brand-core{color:#c99a6c;animation:v-pulse 2s ease-in-out infinite}
+@keyframes v-pulse{0%,62%{color:#c99a6c;text-shadow:none}74%{color:#f5d9a8;text-shadow:0 0 10px rgba(245,217,168,.75)}85%{color:#f7e3b5;text-shadow:0 0 12px rgba(247,227,181,.9)}100%{color:#c99a6c}}
+.hero-mphoto{display:none;width:100%;object-fit:cover;border-radius:18px;margin-top:20px;box-shadow:0 24px 50px -30px rgba(34,25,19,.45)}
+
+/* мобильное hero-фото: видно, перед кнопками */
+.hero-mphoto{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;margin:0 0 22px;box-shadow:0 24px 50px -30px rgba(34,25,19,.45)}
+
+/* ФИКС: на мобилке убираем фоновое фото (дублирует hero-mphoto), hero-фото гарантированно видно */
+@media (max-width:960px){
+  .hero-bg{display:none}
+  .hero-mphoto{display:block!important;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;margin:0 0 22px;box-shadow:0 24px 50px -30px rgba(34,25,19,.45)}
+}
+/* ФИКС О салоне: masonry */
+.about-media{display:block;columns:2;column-gap:16px}
+.about-media figure{break-inside:avoid;margin:0 0 16px}
+.about-media img{aspect-ratio:auto;height:auto}
+@media (max-width:640px){
+  .about-media{columns:1}
+}
+
+/* мобильный hero с бейджем */
+.hero-mmedia{position:relative;display:none}
+@media (max-width:960px){
+  .hero-mmedia{display:block;max-width:420px;margin:32px auto 32px}
+  .hero-mmedia .hero-mphoto{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;box-shadow:0 24px 50px -30px rgba(34,25,19,.45);margin:0}
+  .hero-mmedia .hero-badge{position:absolute;left:12px;bottom:14px;padding:10px 14px;font-size:12px}
+  .hero-mmedia .hero-badge b{font-size:19px}
+}
+/* hidden всегда скрыт */
+[hidden]{display:none!important}
+
+/* ===== ДЕМО-ПЛАШКА: стандарт (над шапкой, шапка не наезжает на текст) ===== */
+.demo-ribbon{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:1300!important;box-sizing:border-box!important}
+body{padding-top:34px!important}
+body.demo-off{padding-top:0!important}
+body.demo-off .demo-ribbon{display:none!important}
+#siteHeader{top:34px!important}
+body.demo-off #siteHeader{top:0!important}
+
+/* ===== ПЛАШКА-КОМПАКТ: одна строка, ниже, тоньше (стандарт 03.09) ===== */
+.demo-ribbon{height:34px!important;min-height:34px!important;padding:0 12px!important;gap:10px!important;border-bottom-width:1px!important}
+.demo-label{gap:6px!important;font-size:11px!important;letter-spacing:.12em!important}
+.demo-label i{width:4px!important;height:4px!important}
+.demo-remove{margin-left:0!important;padding:3px 9px!important;font-size:10.5px!important;line-height:1.4!important;border-radius:999px!important}
+@media(max-width:560px){
+ .demo-label{font-size:9px!important;letter-spacing:.09em!important;gap:5px!important}
+ .demo-ribbon{gap:7px!important;padding:0 8px!important}
+ .demo-remove{padding:2px 7px!important;font-size:9px!important}
+ .demo-label b,.demo-label .dl-sub,.demo-label .dl-love{white-space:nowrap!important}
+}
+/* ===== ЛЕНТА-СТАНДАРТ: бегущая строка «полотно в рамке» ===== */
+.ticker{
+  border:1px solid rgba(201,164,106,.45)!important;
+  border-radius:10px!important;
+  padding:9px 0!important;
+  overflow:hidden!important;
+}
+.ticker *{font-size:clamp(11px,2.9vw,13px)!important;letter-spacing:.16em!important;line-height:1.25!important;text-transform:uppercase!important}
+.ticker .marquee-track{padding-top:0!important;padding-bottom:0!important}
+.ticker .ticker-track{padding-top:0!important;padding-bottom:0!important}
+.ticker .tape-track{padding-top:0!important;padding-bottom:0!important}
+.ticker .mq-track{padding-top:0!important;padding-bottom:0!important}
+.ticker .mq-t{padding-top:0!important;padding-bottom:0!important}
+.ticker .marquee__track{padding-top:0!important;padding-bottom:0!important}
+.ticker .ticker__track{padding-top:0!important;padding-bottom:0!important}
+.ticker .tape__track{padding-top:0!important;padding-bottom:0!important}
+.ticker .marquee-track ul{padding-top:0!important;padding-bottom:0!important}
+.ticker .mq-set{padding-top:0!important;padding-bottom:0!important}
+.ticker .mq-group{padding-top:0!important;padding-bottom:0!important}
+.ticker .marquee__group{padding-top:0!important;padding-bottom:0!important}
+.ticker .mq-seq{padding-top:0!important;padding-bottom:0!important}
+.ticker .marquee-group{padding-top:0!important;padding-bottom:0!important}
+.ticker .ticker-group{padding-top:0!important;padding-bottom:0!important}
+.ticker .tape-group{padding-top:0!important;padding-bottom:0!important}
+.ticker .ticker-half{padding-top:0!important;padding-bottom:0!important}
+.ticker .marquee__list{padding-top:0!important;padding-bottom:0!important}
+.ticker .ticker-clip{padding-top:0!important;padding-bottom:0!important}
+.ticker .mq-item{padding-top:0!important;padding-bottom:0!important}
+.ticker .ticker-item{padding-top:0!important;padding-bottom:0!important}
+.ticker .tape-item{padding-top:0!important;padding-bottom:0!important}
+.ticker .marquee__item{padding-top:0!important;padding-bottom:0!important}
+.ticker .mq-i{padding-top:0!important;padding-bottom:0!important}
+.ticker ul{padding-top:0!important;padding-bottom:0!important}
+.ticker li{padding-top:0!important;padding-bottom:0!important}
+.ticker span{padding-top:0!important;padding-bottom:0!important}
+@media (max-width:380px){
+  .ticker *{font-size:10.5px!important;letter-spacing:.12em!important}
+}
+
+
+/* ЛЕНТА-ШИРИНА: полотно в рамках родителя (не раздувает экран) */
+.ticker{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important}
+
+
+/* ПОДПИСИ-СТАНДАРТ: подпись под фото, в потоке (как simple) */
+#works .work-card{position:relative}
+#works .work-card .work-cap, figcaption{position:static!important;inset:auto!important;left:auto!important;right:auto!important;bottom:auto!important;top:auto!important;
+  background:none!important;backdrop-filter:none!important;border:none!important;box-shadow:none!important;
+  transform:none!important;opacity:1!important;padding:12px 14px 14px!important;
+  display:block!important;border-top:1px solid rgba(128,128,128,.25)!important;
+  font-size:12.5px!important;line-height:1.4!important;color:inherit!important;text-transform:none!important;letter-spacing:.02em!important}
+#works .work-card .work-cap, figcaption b,#works .work-card .work-cap, figcaption strong{display:block;font-size:14px!important;font-weight:600!important;color:inherit!important;margin-top:2px}
+#works .work-card .work-cap, figcaption span,#works .work-card .work-cap, figcaption small{display:inline-block;font-size:10.5px!important;font-weight:700!important;letter-spacing:.14em!important;text-transform:uppercase!important;opacity:.75!important}
+</style>
+</head>
+<body>
+<div class="demo-ribbon" id="demoRibbon" role="note">
+  <span class="demo-label"><b>ДЕМО-ВЕРСИЯ</b><i></i><span class="dl-sub">создано</span><b class="dl-love">с любовью</b></span>
+  <button type="button" class="demo-remove" id="demoRemove">Убрать метку</button>
+</div> style="padding-top:42px"
+
+<!-- ======= SVG ICONS (sprite) ======= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></symbol>
+    <symbol id="i-razor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2.5" width="8" height="8" rx="2"/><path d="M10 6h4M12 10.5V15"/><path d="M12 15l5.5 6.5"/><path d="M10.2 16.8l1.6-1.6"/></symbol>
+    <symbol id="i-child" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4.5"/><path d="M4.5 20.5c1.2-3.4 4-5 7.5-5s6.3 1.6 7.5 5"/></symbol>
+    <symbol id="i-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.4 6 10.4a6 6 0 1 1-12 0c0-4 6-10.4 6-10.4Z"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17.5 3 7l5.2 4L12 4.5 15.8 11 21 7l-1 10.5Z"/><path d="M4.5 20.5h15"/></symbol>
+    <symbol id="i-polish" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5h5V7h-5z"/><path d="M8.5 7h7l1.2 11.5a3 3 0 0 1-3 3.3h-3.4a3 3 0 0 1-3-3.3L8.5 7Z"/><path d="M10 11h4"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5c-9 .3-15.5 5.5-15.5 13.5 0 1.2.2 2.4.5 3.5 8.8.3 15-5.5 15-14v-3Z"/><path d="M5.5 20c3-6 7-9.5 11.5-12"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.7c0 4.9-8.8 10.3-8.8 10.3S3.2 13.6 3.2 8.7a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.8 8.7 19 10.5 13.8 12.3 12 17.5 10.2 12.3 5 10.5 10.2 8.7 12 3.5Z"/><path d="M18.5 16.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></symbol>
+    <symbol id="i-med" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 15.5 6 10.8A2.5 2.5 0 0 1 8.4 9h7.2a2.5 2.5 0 0 1 2.4 1.8l1.5 4.7"/><rect x="3.5" y="15.5" width="17" height="4" rx="1.4"/><circle cx="7.5" cy="17.5" r=".6"/><circle cx="16.5" cy="17.5" r=".6"/><path d="M12 3.5v2M8 5l1 1.4M16 5l-1 1.4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s7-6.2 7-11.3A7 7 0 0 0 5 10.2c0 5.1 7 11.3 7 11.3Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v2.6a1.9 1.9 0 0 1-2.1 1.9 19 19 0 0 1-8.3-3 18.7 18.7 0 0 1-5.7-5.7 19 19 0 0 1-3-8.3A1.9 1.9 0 0 1 3.8 2h2.6A1.9 1.9 0 0 1 8.3 3.6c.1.9.4 1.9.7 2.8a1.9 1.9 0 0 1-.4 2L7.5 9.5a15.2 15.2 0 0 0 5.7 5.7l1.1-1.1a1.9 1.9 0 0 1 2-.4c.9.3 1.9.6 2.8.7A1.9 1.9 0 0 1 21 16.5Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.4L12 17.4l-5.8 3-1.1-6.4L.4 9.4l6.5-.9L12 2.6Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M4 13.2C4 8.9 6.6 5.8 10.4 4.6l.9 1.8c-2 1-3.2 2.6-3.4 4.4.3-.1.7-.2 1.1-.2 1.9 0 3.3 1.4 3.3 3.4s-1.5 3.5-3.6 3.5C6.1 17.5 4 15.9 4 13.2Zm9.5 0c0-4.3 2.6-7.4 6.4-8.6l.9 1.8c-2 1-3.2 2.6-3.4 4.4.3-.1.7-.2 1.1-.2 1.9 0 3.3 1.4 3.3 3.4s-1.5 3.5-3.6 3.5c-2.6 0-4.7-1.6-4.7-4.3Z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></symbol>
+    <symbol id="i-diamond" viewBox="0 0 8 8" fill="currentColor" stroke="none"><path d="M4 0L8 4 4 8 0 4Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ======= HEADER ======= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="Твой Стиль - на главную">
+      <small>салон красоты</small>
+      <b>Твой Стиль</b>
+    </a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="#about">О салоне</a>
+      <a href="#services">Услуги и цены</a>
+      <a href="#works">Работы</a>
+      <a href="#masters">Мастера</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="btn btn-gold btn-sm header-cta" data-book type="button">Записаться</button>
+    <button class="burger" id="burgerBtn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
+      <svg class="ic-burger" width="22" height="22"><use href="#i-burger"/></svg>
+      <svg class="ic-x" width="22" height="22"><use href="#i-x"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<nav class="mnav" id="mobileNav" aria-label="Мобильное меню">
+  <div class="mnav-links">
+    <a href="#about">О салоне</a>
+    <a href="#services">Услуги и цены</a>
+    <a href="#works">Работы</a>
+    <a href="#masters">Мастера</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contacts">Контакты</a>
+  </div>
+  <div class="mnav-foot">
+    <a class="mnav-phone" href="tel:+74012753855"><svg width="18" height="18"><use href="#i-phone"/></svg>+7 (4012) 75-38-55</a>
+    <button class="btn btn-gold" data-book type="button">Записаться онлайн</button>
+    <p class="mnav-addr">Калининград, ул. Маршала Борзова, 48А · 2 этаж здания автомойки «Глянц-Концепт» · ежедневно 10:00–20:00</p>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ======= HERO ======= -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="tvoy_stil_photo07.jpg" alt="" fetchpriority="high">
+  </div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="hero-kicker">Калининград · ул. Маршала Борзова, 48А</span>
+      <h1>Это - <em>ваш стиль</em>. И мы умеем его найти</h1>
+      <p class="hero-sub">Стрижки, окрашивание, маникюр, педикюр, массаж и косметолог с медицинским образованием - на втором этаже комплекса «Автомолл 39». Пока ваш автомобиль на мойке, вы становитесь красивее.</p>
+      
+        <div class="hero-mmedia">
+      <img class="hero-mphoto" src="tvoy_stil_photo07.jpg" width="960" height="720" alt="Фасад салона красоты Твой Стиль в Калининграде" loading="lazy">
+      <div class="hero-badge hero-badge--m">
+        <span class="stars" aria-hidden="true">
+          <svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg>
+        </span>
+        <span><b>4,5</b><br>рейтинг на 2ГИС</span>
+      </div>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-gold" data-book type="button">Записаться онлайн
+          <svg class="arr" width="18" height="18"><use href="#i-arrow"/></svg>
+        </button>
+        <a class="btn btn-ghost" href="#services">Услуги и цены</a>
+      </div>
+      <div class="hero-facts">
+        <span class="chip"><svg width="15" height="15"><use href="#i-star"/></svg>4,3 на Яндекс.Картах · 32 оценки</span>
+        <span class="chip"><svg width="15" height="15"><use href="#i-clock"/></svg>Ежедневно 10:00–20:00</span>
+        <span class="chip"><svg width="15" height="15"><use href="#i-pin"/></svg>2 этаж · парковка и мойка рядом</span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="tvoy_stil_photo07.jpg" alt="Фасад салона красоты «Твой Стиль» в Калининграде" fetchpriority="high">
+      <div class="hero-badge">
+        <span class="stars" aria-hidden="true">
+          <svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg><svg width="13" height="13"><use href="#i-star"/></svg>
+        </span>
+        <span><b>4,5</b><br>рейтинг на 2ГИС</span>
+      </div>
+    </div>
+  </div>
+  <!-- бегущая строка: видна сразу, внизу первого экрана -->
+  <div class="wrap ticker-wrap">
+    <div class="ticker" aria-label="Ключевые услуги салона">
+      <div class="ticker-track">
+        <div class="tick-group">
+          <span class="tick-item">Женская стрижка от 800 ₽ <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Мужская стрижка от 500 ₽ <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Сложное окрашивание <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Свадебные и вечерние причёски <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Маникюр и гель-лак <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Педикюр <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Массаж <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Косметолог с мед. образованием <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Ежедневно 10:00–20:00 <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+        </div>
+        <div class="tick-group" aria-hidden="true">
+          <span class="tick-item">Женская стрижка от 800 ₽ <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Мужская стрижка от 500 ₽ <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Сложное окрашивание <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Свадебные и вечерние причёски <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Маникюр и гель-лак <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Педикюр <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Массаж <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Косметолог с мед. образованием <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+          <span class="tick-item">Ежедневно 10:00–20:00 <svg width="7" height="7"><use href="#i-diamond"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ABOUT ======= -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <span class="eyebrow">О салоне</span>
+        <h2>Каждый клиент здесь - <span class="gold">особый</span></h2>
+        <p>Салон красоты «Твой Стиль» работает в Калининграде в комплексе «Автомолл 39» на улице Маршала Борзова. Наши мастера помогают создать стиль и подчеркнуть индивидуальность - от точной стрижки до полного образа на вечер.</p>
+        <p><b>Мы предоставляем широкий спектр услуг:</b> мужские, женские и детские стрижки, уход за волосами, окрашивание, косметолог с медицинским образованием, маникюр, педикюр и массаж.</p>
+        <div class="about-quote">
+          «Очень хороший салон, девочки все мастера с опытом. Медицинская обработка инструментов, что в наше время редкость»
+          <span>- Клаудия, отзыв клиента</span>
+        </div>
+        <div class="perks">
+          <div class="perk">
+            <span class="perk-ic"><svg width="22" height="22"><use href="#i-med"/></svg></span>
+            <div><b>Стерильность и медицинский подход</b><p>Медицинская обработка инструментов; косметолог - с медицинским образованием.</p></div>
+          </div>
+          <div class="perk">
+            <span class="perk-ic"><svg width="22" height="22"><use href="#i-scissors"/></svg></span>
+            <div><b>Мастера с опытом</b><p>Парикмахеры, ногтевой сервис и массажисты, к которым возвращаются годами.</p></div>
+          </div>
+          <div class="perk">
+            <span class="perk-ic"><svg width="22" height="22"><use href="#i-car"/></svg></span>
+            <div><b>Мойка и парковка в том же здании</b><p>Оставьте автомобиль на мойке «Глянц-Концепт» - заберите его чистым после процедур.</p></div>
+          </div>
+          <div class="perk">
+            <span class="perk-ic"><svg width="22" height="22"><use href="#i-heart"/></svg></span>
+            <div><b>Всё рядом</b><p>Кафе и магазины комплекса - можно совместить красоту с делами и отдыхом.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-media reveal">
+        <img class="ph-main" src="tvoy_stil_photo03.jpg" alt="Зал салона «Твой Стиль»: кресло мастера, зеркала и стеллажи" loading="lazy">
+        <img class="ph-small" src="tvoy_stil_photo14.jpg" alt="Светлый интерьер и лестница на второй этаж салона" loading="lazy">
+      </div>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b>4,3</b><span>рейтинг на Яндекс.Картах, 32 оценки клиентов</span></div>
+      <div class="stat"><b>4,5</b><span>рейтинг на 2ГИС по отзывам посетителей</span></div>
+      <div class="stat"><b>8+</b><span>направлений: от стрижек до косметологии</span></div>
+      <div class="stat"><b>10–20</b><span>работаем ежедневно, без выходных</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= SERVICES ======= -->
+<section class="section tinted" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Услуги и цены</span>
+      <h2>Выберите свою процедуру - <span class="gold">и приходите</span></h2>
+      <p class="lead">Цены на стрижки открытые. Стоимость остальных услуг зависит от параметров и сложности - точную сумму мастер назовёт при записи.</p>
+    </div>
+    <div class="serv-grid">
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-scissors"/></svg></span><span class="price-tag">от 800 ₽</span></div>
+        <h3>Женская стрижка</h3>
+        <p>Форма, которая подходит именно вам: от классики до актуальных линий, с укладкой после стрижки.</p>
+        <button class="btn btn-dark" data-book data-service="Женская стрижка" type="button">Записаться</button>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-razor"/></svg></span><span class="price-tag">от 500 ₽</span></div>
+        <h3>Мужская стрижка</h3>
+        <p>Аккуратные мужские стрижки любой сложности, стрижка бороды - быстро и точно.</p>
+        <button class="btn btn-dark" data-book data-service="Мужская стрижка" type="button">Записаться</button>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-child"/></svg></span><span class="price-tag">по записи</span></div>
+        <h3>Детская стрижка</h3>
+        <p>Бережно и терпеливо - стрижём даже самых маленьких гостей салона.</p>
+        <button class="btn btn-dark" data-book data-service="Детская стрижка" type="button">Записаться</button>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-color"/></svg></span><span class="price-tag">по записи</span></div>
+        <h3>Окрашивание</h3>
+        <p>Сложное окрашивание, тон в тон, обновление цвета - подберём состав и оттенок под ваши волосы.</p>
+        <p class="serv-note">Цена зависит от длины волос и сложности работы - точную стоимость назовём при записи.</p>
+        <button class="btn btn-dark" data-book data-service="Окрашивание волос" type="button">Записаться</button>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-crown"/></svg></span><span class="price-tag">по записи</span></div>
+        <h3>Причёски и укладки</h3>
+        <p>Свадебные и вечерние причёски, локоны и укладки на важное событие - с подбором под образ.</p>
+        <button class="btn btn-dark" data-book data-service="Причёска и укладка" type="button">Записаться</button>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-polish"/></svg></span><span class="price-tag">по записи</span></div>
+        <h3>Маникюр</h3>
+        <p>Аппаратный и комбинированный маникюр, гель-лак, наращивание гелем. Покрытие держится месяц - проверено клиентами.</p>
+        <button class="btn btn-dark" data-book data-service="Маникюр" type="button">Записаться</button>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-leaf"/></svg></span><span class="price-tag">по записи</span></div>
+        <h3>Педикюр</h3>
+        <p>Классический и комбинированный педикюр для женщин и мужчин, парафиновые ванночки.</p>
+        <button class="btn btn-dark" data-book data-service="Педикюр" type="button">Записаться</button>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-heart"/></svg></span><span class="price-tag">по записи</span></div>
+        <h3>Массаж</h3>
+        <p>Оздоровительный, расслабляющий, антицеллюлитный, массаж лица и спины - у опытного массажиста.</p>
+        <button class="btn btn-dark" data-book data-service="Массаж" type="button">Записаться</button>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-top"><span class="serv-ic"><svg width="24" height="24"><use href="#i-sparkle"/></svg></span><span class="price-tag">по записи</span></div>
+        <h3>Косметолог</h3>
+        <p>Специалист с медицинским образованием: чистки, пилинги, коррекция и окрашивание бровей.</p>
+        <button class="btn btn-dark" data-book data-service="Косметолог" type="button">Записаться</button>
+      </article>
+    </div>
+    <p class="serv-foot reveal"><svg width="17" height="17"><use href="#i-info"/></svg> Цены указаны по данным открытых справочников. Точную стоимость мастер подтвердит при записи - она зависит от длины волос, объёма и сложности работы.</p>
+
+    <div class="cta-band reveal">
+      <div>
+        <h3>Не знаете, с чего начать? Подскажем мастера и подберём время</h3>
+        <div class="band-contacts">
+          <span>Ежедневно с 10:00 до 20:00</span>
+          <a href="tel:+74012753855"><svg width="16" height="16" style="vertical-align:-2px"><use href="#i-phone"/></svg> +7 (4012) 75-38-55</a>
+        </div>
+      </div>
+      <button class="btn btn-gold" data-book type="button">Записаться онлайн
+        <svg class="arr" width="18" height="18"><use href="#i-arrow"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ======= WORKS ======= -->
+<section class="section" id="works">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Работы мастеров</span>
+      <h2>Результаты, которые <span class="gold">говорят сами</span></h2>
+      <p class="lead">Несколько работ парикмахерского зала «Твой Стиль» - окрашивание и укладки, выполненные нашими мастерами.</p>
+    </div>
+    <div class="works-grid">
+      <figure class="work-card reveal">
+        <img src="tvoy_stil_photo06.jpg" alt="Окрашивание волос: ровный светлый блонд, вид сзади" loading="lazy">
+        <figcaption class="work-cap">
+          <span class="work-tag">Окрашивание</span>
+          <b>Чистый блонд - ровный цвет без пятен</b>
+        </figcaption>
+      </figure>
+      <figure class="work-card reveal">
+        <img src="tvoy_stil_photo05.jpg" alt="Укладка волос: длинные светлые волны, вид сзади" loading="lazy">
+        <figcaption class="work-cap">
+          <span class="work-tag">Укладка</span>
+          <b>Голливудские волны на длинные волосы</b>
+        </figcaption>
+      </figure>
+      <figure class="work-card reveal">
+        <img src="tvoy_stil_photo10.jpg" alt="Вечерняя причёска: светлые локоны, вид сзади" loading="lazy">
+        <figcaption class="work-cap">
+          <span class="work-tag">Вечерняя причёска</span>
+          <b>Лёгкие локоны - образ на выход</b>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="works-note reveal"><svg width="17" height="17"><use href="#i-info"/></svg> Фото представлены для парикмахерского зала. Примеры работ ногтевой студии и массажа скоро появятся.</p>
+  </div>
+</section>
+
+<!-- ======= MASTERS ======= -->
+<section class="section tinted" id="masters">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Мастера</span>
+      <h2>Команда, к которой <span class="gold">возвращаются</span></h2>
+      <p class="lead">Имена, которые чаще всего звучат в отзывах наших клиентов.</p>
+    </div>
+    <div class="masters-grid">
+      <article class="master-card reveal">
+        <div class="avatar av-1" aria-hidden="true">А</div>
+        <h3>Анна</h3>
+        <p class="master-role">Парикмахер</p>
+        <p class="master-quote">«Мастер от Бога. Сделала мне причёску на 5+. Подобрала к моему наряду украшения»<span>- Марина, сентябрь 2024</span></p>
+      </article>
+      <article class="master-card reveal">
+        <div class="avatar av-2" aria-hidden="true">И</div>
+        <h3>Ирина</h3>
+        <p class="master-role">Парикмахер</p>
+        <p class="master-quote">«Посещаю только ради стрижки. Очень рекомендую мастера Ирину»<span>- Татьяна Югина, июнь 2022</span></p>
+      </article>
+      <article class="master-card reveal">
+        <div class="avatar av-3" aria-hidden="true">Т</div>
+        <h3>Татьяна</h3>
+        <p class="master-role">Мастер ногтевой студии · хозяйка салона</p>
+        <p class="master-quote">«Ногти красивы и ухожены, и всё благодаря мастеру Татьяне. Держатся месяц»<span>- Злата Анишулис, март 2021</span></p>
+      </article>
+      <article class="master-card reveal">
+        <div class="avatar av-4" aria-hidden="true">Е</div>
+        <h3>Елена</h3>
+        <p class="master-role">Массажист</p>
+        <p class="master-quote">«Массажист Елена просто волшебница, девочки все мастера с опытом»<span>- Клаудия, январь 2020</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======= REVIEWS ======= -->
+<section class="section dark" id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Отзывы клиентов</span>
+      <h2>Настоящие отзывы - <span class="gold">без прикрас</span></h2>
+      <div class="rating-row">
+        <div class="rating-card">
+          <b>4,3</b>
+          <div>
+            <span class="stars" aria-hidden="true"><svg width="12" height="12"><use href="#i-star"/></svg><svg width="12" height="12"><use href="#i-star"/></svg><svg width="12" height="12"><use href="#i-star"/></svg><svg width="12" height="12"><use href="#i-star"/></svg><svg width="12" height="12"><use href="#i-star"/></svg></span>
+            <span>Яндекс.Карты · 32 оценки</span>
+          </div>
+        </div>
+        <div class="rating-card">
+          <b>4,5</b>
+          <div>
+            <span class="stars" aria-hidden="true"><svg width="12" height="12"><use href="#i-star"/></svg><svg width="12" height="12"><use href="#i-star"/></svg><svg width="12" height="12"><use href="#i-star"/></svg><svg width="12" height="12"><use href="#i-star"/></svg><svg width="12" height="12"><use href="#i-star"/></svg></span>
+            <span>2ГИС · 17 оценок</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <article class="rev-card reveal">
+        <div class="rev-head">
+          <div class="avatar av-1" aria-hidden="true">Я</div>
+          <div><b>Ярослав Шпаков</b><time datetime="2024-03-20">20 марта</time></div>
+        </div>
+        <blockquote><svg class="rev-mark" width="16" height="16"><use href="#i-quote"/></svg> Отличный салон за демократическую цену, мастер сделает все как надо, если правильно ему объяснить. Работают ножницами аккуратно все подстригают. Если что-то не так могут сразу же все исправить</blockquote>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-head">
+          <div class="avatar av-5" aria-hidden="true">М</div>
+          <div><b>Марина</b><time datetime="2024-09-27">27 сентября 2024</time></div>
+        </div>
+        <blockquote><svg class="rev-mark" width="16" height="16"><use href="#i-quote"/></svg> Благодарю парикмахера Анну. Мастер от Бога. Сделала мне причёску на 5+. Подобрала к моему наряду украшения. Общительная, не хотела от неё уходить. Салон удобно расположен, есть где оставить машину, есть мойка, кафе. Отличный салон</blockquote>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-head">
+          <div class="avatar av-6" aria-hidden="true">С</div>
+          <div><b>Светлана Давыдова</b><time datetime="2024-12-02">2 декабря 2024</time></div>
+        </div>
+        <blockquote><svg class="rev-mark" width="16" height="16"><use href="#i-quote"/></svg> Отличное местечко! Приятный очень коллектив, профессиональные мастера, рекомендую. Пока идешь на процедуры красоты можно автомобиль оставить на Мойке. Считаю прекрасное комбо</blockquote>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-head">
+          <div class="avatar av-3" aria-hidden="true">З</div>
+          <div><b>Злата Анишулис</b><time datetime="2021-03-22">22 марта 2021</time></div>
+        </div>
+        <blockquote><svg class="rev-mark" width="16" height="16"><use href="#i-quote"/></svg> Замечательный салон! Прекрасная ногтевая студия. Это просто восхитительно, когда твои ногти красивы и ухожены, и всё благодаря мастеру Татьяне (хозяйке салона). Держатся месяц. Я довольна! Спасибо Вам девочки!</blockquote>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-head">
+          <div class="avatar av-4" aria-hidden="true">К</div>
+          <div><b>Клаудия</b><time datetime="2020-01-27">27 января 2020</time></div>
+        </div>
+        <blockquote><svg class="rev-mark" width="16" height="16"><use href="#i-quote"/></svg> Очень хороший салон, массажист Елена просто волшебница, девочки все мастера с опытом. Медицинская обработка Инструментов, что в наше время редкость</blockquote>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-head">
+          <div class="avatar av-2" aria-hidden="true">Т</div>
+          <div><b>Татьяна Югина</b><time datetime="2022-06-21">21 июня 2022</time></div>
+        </div>
+        <blockquote><svg class="rev-mark" width="16" height="16"><use href="#i-quote"/></svg> Посещаю только ради стрижки. Очень рекомендую мастера Ирину</blockquote>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FAQ ======= -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Частые вопросы</span>
+      <h2>Всё, что спрашивают <span class="gold">перед визитом</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Где находится салон и как его найти?<span class="q-ic"><svg width="16" height="16"><use href="#i-plus"/></svg></span></summary>
+        <p class="a">Калининград, ул. Маршала Борзова, 48А - здание комплекса «Автомолл 39». Салон расположен на втором этаже здания автомойки «Глянц-Концепт». Вход - по вывеске «Салон красоты Это Твой Стиль», поднимитесь на 2 этаж.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Есть ли парковка и куда деть машину?<span class="q-ic"><svg width="16" height="16"><use href="#i-plus"/></svg></span></summary>
+        <p class="a">Да. Рядом с салоном - автомойка «Глянц-Концепт» и место, где можно оставить автомобиль. Клиенты часто оставляют машину на мойке на время процедур и уезжают уже на чистом автомобиле - то самое «прекрасное комбо» из отзывов.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Насколько стерильны инструменты?<span class="q-ic"><svg width="16" height="16"><use href="#i-plus"/></svg></span></summary>
+        <p class="a">В салоне проводится медицинская обработка инструментов - это отмечают клиенты в отзывах. Косметолог работает с медицинским образованием.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько стоят услуги?<span class="q-ic"><svg width="16" height="16"><use href="#i-plus"/></svg></span></summary>
+        <p class="a">Женская стрижка - от 800 ₽, мужская - от 500 ₽. Стоимость окрашивания, маникюра, педикюра, массажа и косметологии зависит от длины волос, объёма и сложности работы - точную цену мастер назовёт при записи.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Как записаться?<span class="q-ic"><svg width="16" height="16"><use href="#i-plus"/></svg></span></summary>
+        <p class="a">Онлайн: нажмите кнопку «Записаться» на сайте и оставьте заявку - мы перезвоним и подтвердим время. Или по телефону <a href="tel:+74012753855"><b>+7 (4012) 75-38-55</b></a>, ежедневно с 10:00 до 20:00.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CONTACTS ======= -->
+<section class="section tinted" id="contacts">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Контакты</span>
+      <h2>Ждём вас в <span class="gold">«Твой Стиль»</span></h2>
+    </div>
+    <div class="contacts-grid">
+      <div class="reveal">
+        <div class="c-list">
+          <div class="c-item">
+            <span class="c-ic"><svg width="22" height="22"><use href="#i-pin"/></svg></span>
+            <div><b>Адрес</b>г. Калининград, ул. Маршала Борзова, 48А
+              <small>2 этаж здания автомойки «Глянц-Концепт», комплекс «Автомолл 39»</small>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ic"><svg width="22" height="22"><use href="#i-phone"/></svg></span>
+            <div><b>Телефон</b><a href="tel:+74012753855">+7 (4012) 75-38-55</a>
+              <small>Ответим и запишем на удобное время</small>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ic"><svg width="22" height="22"><use href="#i-clock"/></svg></span>
+            <div><b>Часы работы</b>Ежедневно: 10:00 – 20:00
+              <small>Работу в праздничные дни уточняйте по телефону</small>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ic"><svg width="22" height="22"><use href="#i-car"/></svg></span>
+            <div><b>Как добраться</b>На автомобиле - к зданию «Автомолл 39», вход со стороны вывески салона
+              <small>Ориентир - вывеска «Салон красоты Это Твой Стиль» и указатель «2 этаж»</small>
+            </div>
+          </div>
+        </div>
+        <div class="parking-box">
+          <svg width="30" height="30"><use href="#i-car"/></svg>
+          <div>
+            <b>Парковка и мойка для клиентов</b>
+            <p>Есть где оставить машину прямо у здания. Советуем комбо от наших клиентов: оставьте автомобиль на мойке «Глянц-Концепт» - пока вы на процедурах, его помоют.</p>
+          </div>
+        </div>
+        <div class="contacts-cta">
+          <button class="btn btn-gold" data-book type="button">Записаться онлайн
+            <svg class="arr" width="18" height="18"><use href="#i-arrow"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="c-photos reveal">
+        <figure class="wide">
+          <img class="wide-img" src="tvoy_stil_photo19.jpg" alt="Здание комплекса «Автомолл 39» - вход в салон красоты справа" loading="lazy">
+          <figcaption>Здание комплекса «Автомолл 39»</figcaption>
+        </figure>
+        <figure>
+          <img class="sq-img" src="tvoy_stil_photo13.jpg" alt="Вход в салон: указатель на второй этаж" loading="lazy">
+          <figcaption>Вход и указатель на 2 этаж</figcaption>
+        </figure>
+        <figure>
+          <img class="sq-img" src="tvoy_stil_photo16.jpg" alt="Дверь салона с табличкой и телефоном" loading="lazy">
+          <figcaption>Наш телефон - на табличке у двери</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======= FOOTER ======= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="#top" class="logo"><small>салон красоты</small><b>Твой Стиль</b></a>
+      <nav class="footer-links" aria-label="Навигация в подвале">
+        <a href="#about">О салоне</a>
+        <a href="#services">Услуги и цены</a>
+        <a href="#works">Работы</a>
+        <a href="#masters">Мастера</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="footer-contacts">
+        Калининград, ул. Маршала Борзова, 48А · ежедневно 10:00–20:00<br>
+        <a href="tel:+74012753855">+7 (4012) 75-38-55</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Салон красоты «Твой Стиль», Калининград</span>
+      <span>Информация на сайте не является публичной офертой</span>
+    </div>
+  </div>
+
+    <div class="footer-brand">
+      <span class="brand-made">created by</span>
+      <a class="brand-link" href="https://t.me/ALTAVALTA" target="_blank" rel="noopener">
+        <span class="sig-name"><b>A</b> <b>L</b> <b>T</b> <b>A</b> <b class="brand-core">V</b> <b>A</b> <b>L</b> <b>T</b> <b>A</b></span>
+      </a>
+    </div>
+</footer>
+
+<!-- ======= MODAL: запись ======= -->
+<div class="modal" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="bookModalTitle">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-card">
+    <button class="modal-close" type="button" data-close-modal aria-label="Закрыть окно записи">
+      <svg width="20" height="20"><use href="#i-x"/></svg>
+    </button>
+
+    <div id="bookFormWrap">
+      <p class="modal-kicker">Онлайн-запись</p>
+      <h3 id="bookModalTitle">Запишитесь в «Твой Стиль»</h3>
+      <p class="modal-sub">Оставьте заявку - перезвоним и подтвердим время. Или позвоните: <a href="tel:+74012753855">+7 (4012) 75-38-55</a></p>
+      <form class="book-form" id="bookForm" novalidate>
+        <div class="field" data-field="name">
+          <label for="fName">Ваше имя</label>
+          <input id="fName" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться?">
+          <span class="err-msg">Пожалуйста, укажите имя</span>
+        </div>
+        <div class="form-row">
+          <div class="field" data-field="phone">
+            <label for="fPhone">Телефон</label>
+            <input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+            <span class="err-msg">Укажите корректный номер телефона</span>
+          </div>
+          <div class="field" data-field="time">
+            <label for="fTime">Удобное время</label>
+            <select id="fTime" name="time">
+              <option value="Любое время" selected>Любое время</option>
+              <option value="Утро (10:00–13:00)">Утро (10:00–13:00)</option>
+              <option value="День (13:00–17:00)">День (13:00–17:00)</option>
+              <option value="Вечер (17:00–20:00)">Вечер (17:00–20:00)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field" data-field="service">
+          <label for="fService">Услуга</label>
+          <select id="fService" name="service">
+            <option value="" selected disabled>Выберите услугу</option>
+            <option>Женская стрижка</option>
+            <option>Мужская стрижка</option>
+            <option>Детская стрижка</option>
+            <option>Окрашивание волос</option>
+            <option>Причёска и укладка</option>
+            <option>Маникюр</option>
+            <option>Педикюр</option>
+            <option>Массаж</option>
+            <option>Косметолог</option>
+            <option>Другое / нужна консультация</option>
+          </select>
+          <span class="err-msg">Выберите услугу</span>
+        </div>
+        <div class="field" data-field="comment">
+          <label for="fComment">Комментарий</label>
+          <textarea id="fComment" name="comment" placeholder="Пожелания, длина волос, удобное время - всё, что важно знать мастеру"></textarea>
+        </div>
+        <button class="btn btn-gold" type="submit">Отправить заявку
+          <svg class="arr" width="18" height="18"><use href="#i-arrow"/></svg>
+        </button>
+        <p class="form-hint">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </form>
+    </div>
+
+    <div class="modal-success" id="bookSuccess">
+      <div class="success-ic"><svg width="38" height="38"><use href="#i-check"/></svg></div>
+      <h3>Заявка отправлена</h3>
+      <p id="successText">Спасибо! Мы свяжемся с вами в ближайшее время, чтобы подтвердить запись.</p>
+      <p style="margin-top:14px">Если удобнее голосом - звоните: <a href="tel:+74012753855">+7 (4012) 75-38-55</a></p>
+      <button class="btn btn-dark" type="button" data-close-modal>Готово</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- header shadow ---------- */
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 12); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- burger menu ---------- */
+  var burger = document.getElementById('burgerBtn');
+  var mnav = document.getElementById('mobileNav');
+  var menuOpen = false;
+
+  function setMenu(state){
+    menuOpen = state;
+    burger.classList.toggle('active', state);
+    mnav.classList.toggle('open', state);
+    burger.setAttribute('aria-expanded', state ? 'true' : 'false');
+    burger.setAttribute('aria-label', state ? 'Закрыть меню' : 'Открыть меню');
+    document.body.style.overflow = state ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ setMenu(!menuOpen); });
+  mnav.querySelectorAll('a, button').forEach(function(el){
+    el.addEventListener('click', function(){ setMenu(false); });
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- modal ---------- */
+  var modal = document.getElementById('bookModal');
+  var formWrap = document.getElementById('bookFormWrap');
+  var successBox = document.getElementById('bookSuccess');
+  var form = document.getElementById('bookForm');
+  var serviceSelect = document.getElementById('fService');
+  var successText = document.getElementById('successText');
+  var lastFocused = null;
+  var modalOpen = false;
+
+  function openModal(serviceName){
+    lastFocused = document.activeElement;
+    modalOpen = true;
+    formWrap.style.display = '';
+    successBox.classList.remove('show');
+    if (serviceName) {
+      var found = Array.prototype.slice.call(serviceSelect.options).some(function(o){
+        if (o.value === serviceName) { serviceSelect.value = serviceName; return true; }
+        return false;
+      });
+      if (!found) serviceSelect.selectedIndex = 0;
+    }
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ document.getElementById('fName').focus(); }, 60);
+  }
+
+  function closeModal(){
+    if (!modalOpen) return;
+    modalOpen = false;
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    if (successBox.classList.contains('show')) {
+      form.reset();
+      clearInvalid();
+      formWrap.style.display = '';
+      successBox.classList.remove('show');
+    }
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+
+  document.querySelectorAll('[data-book]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      setMenu(false);
+      openModal(btn.getAttribute('data-service') || '');
+    });
+  });
+  modal.querySelectorAll('[data-close-modal]').forEach(function(el){
+    el.addEventListener('click', closeModal);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') {
+      if (modalOpen) closeModal();
+      else if (menuOpen) setMenu(false);
+    }
+  });
+
+  /* ---------- validation + submit ---------- */
+  function fieldWrap(name){ return form.querySelector('[data-field="'+name+'"]'); }
+  function clearInvalid(){
+    form.querySelectorAll('.field.invalid').forEach(function(f){ f.classList.remove('invalid'); });
+  }
+  form.addEventListener('input', function(e){
+    var f = e.target.closest('.field');
+    if (f) f.classList.remove('invalid');
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    clearInvalid();
+    var ok = true;
+
+    var nameVal = document.getElementById('fName').value.trim();
+    if (nameVal.length < 2) { fieldWrap('name').classList.add('invalid'); ok = false; }
+
+    var phoneVal = document.getElementById('fPhone').value;
+    var digits = (phoneVal.match(/\d/g) || []).join('');
+    if (digits.length < 10) { fieldWrap('phone').classList.add('invalid'); ok = false; }
+
+    if (!serviceSelect.value) { fieldWrap('service').classList.add('invalid'); ok = false; }
+
+    if (!ok) {
+      var firstBad = form.querySelector('.field.invalid input, .field.invalid select');
+      if (firstBad) firstBad.focus();
+      return;
+    }
+
+    successText.textContent = 'Спасибо, ' + nameVal + '! Заявка на услугу «' + serviceSelect.value +
+      '» (' + document.getElementById('fTime').value.toLowerCase() + ') принята. Перезвоним для подтверждения записи.';
+    
+    /* ---------- ALTAVALTA lead worker ---------- */
+    var payload = {
+      name: (function(){ var el=document.getElementById('fName'); return el?el.value.trim():''; })(),
+      phone: (function(){ var el=document.getElementById('fPhone'); return el?el.value.trim():''; })(),
+      service: (function(){ var el=document.getElementById('fService'); return el?el.value:''; })(),
+      time: (function(){ var el=document.getElementById('fTime'); return el?el.value:''; })(),
+      comment: (function(){ var el=document.getElementById('fComment'); return el?el.value.trim():''; })(),
+      source: 'tvoy-stil'
+    };
+    var btn = form.querySelector('[type="submit"]');
+    if(btn){ btn.disabled = true; }
+    var ctrl = new AbortController();
+    var timer = setTimeout(function(){ ctrl.abort(); }, 20000);
+    fetch('https://altavalta-leads.altavalta.workers.dev/', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','X-Lead-Key':'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
+      body: JSON.stringify(payload),
+      signal: ctrl.signal
+    }).then(function(r){ return r.text().then(function(t){ try{return JSON.parse(t);}catch(e){return {ok:false,http:r.status};} }); })
+      .then(function(res){
+        clearTimeout(timer);
+        if(btn){ btn.disabled = false; }
+        if(res && res.ok){
+          formWrap.style.display = 'none';
+          successBox.classList.add('show');
+        } else {
+          alert('Не удалось отправить. Позвоните нам: +7 401 275-38-55');
+        }
+      })
+      .catch(function(){
+        clearTimeout(timer);
+        if(btn){ btn.disabled = false; }
+        alert('Не удалось отправить. Позвоните нам: +7 401 275-38-55');
+      });
+    /* ---------- /worker ---------- */
+    formWrap.style.display = 'none';
+    successBox.classList.add('show');
+  });
+})();
+</script>
+
+<script>
+  (function(){
+    var btn = document.getElementById('demoRemove');
+    if(!btn) return;
+    btn.addEventListener('click', function(){ document.body.classList.add('demo-off'); });
+  })();
+</script>
+</body>
+</html>
